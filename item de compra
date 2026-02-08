@@ -1,0 +1,48 @@
+{
+  "name": "ShoppingItem",
+  "type": "object",
+  "properties": {
+    "shopping_list_id": {
+      "type": "string",
+      "description": "ID da lista de compras"
+    },
+    "name": {
+      "type": "string",
+      "description": "Nome do produto"
+    },
+    "price": {
+      "type": "number",
+      "description": "Preco unitario"
+    },
+    "quantity": {
+      "type": "number",
+      "default": 1,
+      "description": "Quantidade"
+    },
+    "subtotal": {
+      "type": "number",
+      "description": "Preco x Quantidade"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Alimentos",
+        "Bebidas",
+        "Higiene",
+        "Limpeza",
+        "Padaria",
+        "Acougue",
+        "Hortifruti",
+        "Outros"
+      ],
+      "default": "Outros",
+      "description": "Categoria do produto"
+    }
+  },
+  "required": [
+    "shopping_list_id",
+    "name",
+    "price",
+    "quantity"
+  ]
+}
