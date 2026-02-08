@@ -1,0 +1,37 @@
+{
+  "name": "ShoppingList",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nome da lista de compras"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Data da compra"
+    },
+    "total_amount": {
+      "type": "number",
+      "default": 0,
+      "description": "Valor total da compra"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "completed"
+      ],
+      "default": "active",
+      "description": "Status da lista"
+    },
+    "month_year": {
+      "type": "string",
+      "description": "M\u00eas e ano no formato YYYY-MM para filtros"
+    }
+  },
+  "required": [
+    "name",
+    "date"
+  ]
+}
